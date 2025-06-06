@@ -1,0 +1,13 @@
+.header-bubble {
+  background-color: white;
+  color: #b57c3f;            
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
