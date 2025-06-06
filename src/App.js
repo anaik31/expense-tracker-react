@@ -12,7 +12,7 @@ function App() {
     <div className = "app">
     <Header/>
     <div className="app-bubble">
-    <AddTransactionForm/>
+    <AddTransactionForm onAddTransaction={newTx => setTransactions([...transactions, newTx])}/>
     <TransactionsList transactions={transactions}/>
     </div>
     </div>
