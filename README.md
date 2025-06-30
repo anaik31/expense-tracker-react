@@ -88,8 +88,8 @@ Server runs on http://localhost:5001
 
 ## 💾 MySQL Database Schema
 
-1. Create your SQL Table with the following schema
-   ```bash
+1. Create your SQL Table with the following schema:
+   ```sql
   CREATE TABLE expenses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     description VARCHAR(255),
@@ -111,4 +111,5 @@ Server runs on http://localhost:5001
 4. Export transactions as CSV
 
 ## 👨‍💻 Author
-Arpeet Naik
+**Arpeet Naik**  
+[LinkedIn Profile](https://www.linkedin.com/in/arpeet-naik)
