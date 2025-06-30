@@ -1,37 +1,46 @@
-📊 Expense Tracker App
-A full-stack Expense Tracker built with React, Node.js, Express, and MySQL. Track your income and expenses with an intuitive interface that stores your data in a real database.
+# 📊 Expense Tracker App
 
-🚀 Features
+A full-stack Expense Tracker built with **React**, **Node.js**, **Express**, and **MySQL**.  
+Track your income and expenses with an intuitive interface that stores your data in a real database.
 
-✅ Add transactions (income or expenses)
-✅ View total balance, income, and expenses
-✅ Delete transactions
-✅ Data stored persistently in a MySQL database
-✅ RESTful API with Express
-✅ Clean and responsive UI with React
+---
 
+## 🚀 Features
 
-🧠 Tech Stack
+- ✅ Add transactions (income or expenses)  
+- ✅ View total balance, income, and expenses  
+- ✅ Delete transactions  
+- ✅ Data stored persistently in a MySQL database  
+- ✅ RESTful API with Express  
+- ✅ Clean and responsive UI with React  
 
-Frontend
+---
 
-  React (Vite or Create React App)
-  CSS modules or plain CSS
+## 🧠 Tech Stack
 
-Backend
+**Frontend**
 
-  Node.js + Express
-  MySQL (using mysql2 package)
+- React (Vite or Create React App)
+- CSS modules or plain CSS
 
-Hosting
+**Backend**
 
-  `Frontend: localhost:3000`
-  `Backend: localhost:5001/api/expenses`
+- Node.js + Express  
+- MySQL (using `mysql2` package)
 
-🔧 Backend Setup
+**Hosting**
 
-Navigate to the backend folder:
-`cd backend`
+- Frontend: `http://localhost:3000`  
+- Backend: `http://localhost:5001/api/expenses`
+
+---
+
+## 🔧 Backend Setup
+
+1. Navigate to the backend folder:
+
+   ```bash
+   cd backend
 
 Install dependencies:
 `npm install`
