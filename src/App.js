@@ -54,7 +54,7 @@ function App() {
         <Balance
           transactions={transactions}
           startingBalance={31307.97}
-          asOfDate="June 2025"
+          asOfDate={new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long' })}
         />
       </div>
     </div>

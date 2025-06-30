@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+📊 Expense Tracker App
+A full-stack Expense Tracker built with React, Node.js, Express, and MySQL. Track your income and expenses with an intuitive interface that stores your data in a real database.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Features
 
-## Available Scripts
+✅ Add transactions (income or expenses)
+✅ View total balance, income, and expenses
+✅ Delete transactions
+✅ Data stored persistently in a MySQL database
+✅ RESTful API with Express
+✅ Clean and responsive UI with React
 
-In the project directory, you can run:
 
-### `npm start`
+🧠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  React (Vite or Create React App)
+  CSS modules or plain CSS
 
-### `npm test`
+Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  Node.js + Express
+  MySQL (using mysql2 package)
 
-### `npm run build`
+Hosting
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  `Frontend: localhost:3000`
+  `Backend: localhost:5001/api/expenses`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔧 Backend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Navigate to the backend folder:
+`cd backend`
 
-### `npm run eject`
+Install dependencies:
+`npm install`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a .env file in the backend folder:
+`DB_HOST=your-db-host`
+`DB_USER=your-db-user`
+`DB_PASS=your-db-password`
+`DB_NAME=your-db-name`
+`DB_PORT=3306`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the server:
+`node server.js`
+Server runs on http://localhost:5001
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🌐 Frontend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Navigate to the frontend folder:
+`cd src`
 
-## Learn More
+Install dependencies:
+`npm install`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In frontend/package.json, add this line to connect to backend:
+"proxy": "http://localhost:5001"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Start your frontend:
+`npm start`
 
-### Code Splitting
+💾 MySQL Database Schema
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+CREATE TABLE expenses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  description VARCHAR(255),
+  amount DECIMAL(10, 2),
+  date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
-### Analyzing the Bundle Size
+🔄 API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+GET /api/expenses – Get all transactions
+POST /api/expenses – Add a new transaction
+DELETE /api/expenses/:id – Delete a transaction
 
-### Making a Progressive Web App
+✅ Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Add categories (e.g., food, utilities, rent)
+Monthly chart or pie chart of expenses
+User authentication
+Export transactions as CSV
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👨‍💻 Author
+Arpeet Naik
