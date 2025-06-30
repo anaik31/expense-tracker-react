@@ -55,7 +55,6 @@ Track your income and expenses with an intuitive interface that stores your data
    DB_PASS=your-db-password
    DB_NAME=your-db-name
    DB_PORT=3306
-   
 
 4. Start the server:
 
