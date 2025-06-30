@@ -97,7 +97,6 @@ Server runs on http://localhost:5001
      date DATETIME DEFAULT CURRENT_TIMESTAMP
    );
 
-
 ## 🔄 API Endpoints
 
 1. GET /api/expenses – Get all transactions
