@@ -87,14 +87,16 @@ Server runs on http://localhost:5001
 
 ## 💾 MySQL Database Schema
 
-1. Create your SQL Table with the following schema:
+1. Create your SQL table with the following schema:
+
    ```sql
-  CREATE TABLE expenses (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    description VARCHAR(255),
-    amount DECIMAL(10, 2),
-    date DATETIME DEFAULT CURRENT_TIMESTAMP
-  );
+   CREATE TABLE expenses (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     description VARCHAR(255),
+     amount DECIMAL(10, 2),
+     date DATETIME DEFAULT CURRENT_TIMESTAMP
+   );
+
 
 ## 🔄 API Endpoints
 
