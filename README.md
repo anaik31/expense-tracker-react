@@ -42,55 +42,73 @@ Track your income and expenses with an intuitive interface that stores your data
    ```bash
    cd backend
 
-Install dependencies:
-`npm install`
+2. Install dependencies:
 
-Create a .env file in the backend folder:
-`DB_HOST=your-db-host`
-`DB_USER=your-db-user`
-`DB_PASS=your-db-password`
-`DB_NAME=your-db-name`
-`DB_PORT=3306`
+   ```bash
+   npm install
 
-Start the server:
-`node server.js`
+3. Create a .env file in the backend folder:
+
+   ```bash
+   DB_HOST=your-db-host
+   DB_USER=your-db-user
+   DB_PASS=your-db-password
+   DB_NAME=your-db-name
+   DB_PORT=3306
+   
+
+4. Start the server:
+
+   ```bash
+   node server.js
+
 Server runs on http://localhost:5001
 
-🌐 Frontend Setup
+## 🌐 Frontend Setup
 
-Navigate to the frontend folder:
-`cd src`
+1. Navigate to the frontend folder:
 
-Install dependencies:
-`npm install`
+   ```bash
+   cd src
 
-In frontend/package.json, add this line to connect to backend:
-"proxy": "http://localhost:5001"
+2. Install dependencies:
 
-Start your frontend:
-`npm start`
+   ```bash
+   npm install
 
-💾 MySQL Database Schema
+3. In frontend/package.json, add this line to connect to backend:
 
-CREATE TABLE expenses (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  description VARCHAR(255),
-  amount DECIMAL(10, 2),
-  date DATETIME DEFAULT CURRENT_TIMESTAMP
-);
+   ```bash
+   "proxy": "http://localhost:5001"
 
-🔄 API Endpoints
+4. Start your frontend:
 
-GET /api/expenses – Get all transactions
-POST /api/expenses – Add a new transaction
-DELETE /api/expenses/:id – Delete a transaction
+   ```bash
+   npm start
 
-✅ Future Improvements
+## 💾 MySQL Database Schema
 
-Add categories (e.g., food, utilities, rent)
-Monthly chart or pie chart of expenses
-User authentication
-Export transactions as CSV
+1. Create your SQL Table with the following schema
+   ```bash
+  CREATE TABLE expenses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    description VARCHAR(255),
+    amount DECIMAL(10, 2),
+    date DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
 
-👨‍💻 Author
+## 🔄 API Endpoints
+
+1. GET /api/expenses – Get all transactions
+2. POST /api/expenses – Add a new transaction
+3. DELETE /api/expenses/:id – Delete a transaction
+
+## ✅ Future Improvements
+
+1. Add categories (e.g., food, utilities, rent)
+2. Monthly chart or pie chart of expenses
+3. User authentication
+4. Export transactions as CSV
+
+## 👨‍💻 Author
 Arpeet Naik
