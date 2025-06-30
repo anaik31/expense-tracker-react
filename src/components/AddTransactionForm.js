@@ -1,25 +1,15 @@
 import React, { useState } from 'react'
 import '../styles/AddTransactionForm.css'
 
-function AddTransactionForm({onAddTransaction}) {
-
+function AddTransactionForm({ onAddTransaction }) {
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
 
   function handleSubmit(e) {
-    e.preventDefault(); // stop page refresh
-
-    const newTx = {
-      description,
-      amount
-    };
-    onAddTransaction(newTx);
-
-    console.log("Description: ", description);
-    console.log("Amount: ", amount);
-
-    setDescription(''); // reset description input
-    setAmount(''); // reset amount input
+    e.preventDefault();
+    onAddTransaction({ description, amount: Number(amount) });
+    setDescription('');
+    setAmount('');
   }
 
   return (
@@ -32,7 +22,7 @@ function AddTransactionForm({onAddTransaction}) {
             type="text"
             placeholder="Enter description"
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={e => setDescription(e.target.value)}
             style={{ marginLeft: '0.5rem' }}
           />
         </label>
@@ -44,12 +34,12 @@ function AddTransactionForm({onAddTransaction}) {
             type="number"
             placeholder="Enter amount"
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={e => setAmount(e.target.value)}
             style={{ marginLeft: '0.5rem' }}
           />
         </label>
 
-        <button type="submit" style={{marginTop: '1rem'}}>
+        <button type="submit" style={{ marginTop: '1rem' }}>
           Add Transaction
         </button>
       </form>
