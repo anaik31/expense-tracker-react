@@ -1,13 +1,30 @@
-import React, { useState } from 'react'
-import '../styles/AddTransactionForm.css'
+// Import necessary modules from React
+import React, { useState } from 'react';
 
+// Import component-specific CSS
+import '../styles/AddTransactionForm.css';
+
+// Functional component definition
 function AddTransactionForm({ onAddTransaction }) {
+  // React state for the transaction description input
   const [description, setDescription] = useState('');
+
+  // React state for the transaction amount input
   const [amount, setAmount] = useState('');
 
+  /**
+   * Handles form submission:
+   * - Prevents default form behavior (page reload)
+   * - Calls the passed-in onAddTransaction function
+   * - Clears the form inputs
+   */
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent form from refreshing the page
+
+    // Pass the new transaction object to the parent via callback
     onAddTransaction({ description, amount: Number(amount) });
+
+    // Reset input fields
     setDescription('');
     setAmount('');
   }
@@ -15,7 +32,11 @@ function AddTransactionForm({ onAddTransaction }) {
   return (
     <div className="form-bubble">
       <h4>Add Transaction Form</h4>
+
+      {/* Form element handles submit */}
       <form onSubmit={handleSubmit}>
+
+        {/* Transaction Description Input */}
         <label style={{ marginBottom: '1rem', display: 'block' }}>
           Enter transaction name:
           <input
@@ -27,6 +48,7 @@ function AddTransactionForm({ onAddTransaction }) {
           />
         </label>
 
+        {/* Transaction Amount Input */}
         <label style={{ display: 'block' }}>
           Enter transaction amount:
           <input
@@ -39,6 +61,7 @@ function AddTransactionForm({ onAddTransaction }) {
           />
         </label>
 
+        {/* Submit Button */}
         <button type="submit" style={{ marginTop: '1rem' }}>
           Add Transaction
         </button>
@@ -47,4 +70,5 @@ function AddTransactionForm({ onAddTransaction }) {
   );
 }
 
+// Export the component so it can be used in App.js
 export default AddTransactionForm;
