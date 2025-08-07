@@ -1,13 +1,22 @@
+/* Applies styles to the entire body of the webpage */
 body {
-  margin: 0;
+  margin: 0; /* Removes default margin around the page for a clean layout */
+
+  /* Sets a prioritized list of system-friendly fonts for a clean and consistent UI */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
+  /* Smooths font rendering on WebKit-based browsers (like Chrome and Safari) */
   -webkit-font-smoothing: antialiased;
+
+  /* Smooths font rendering on Firefox (Mac) */
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Applies styles to inline <code> elements (often used for displaying code) */
 code {
+  /* Sets a monospaced font family commonly used for code editors */
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
